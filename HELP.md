@@ -16,3 +16,4 @@ The following guides illustrate how to use some features concretely:
 * [Spring Boot and OAuth2](https://spring.io/guides/tutorials/spring-boot-oauth2/)
 * [Authenticating a User with LDAP](https://spring.io/guides/gs/authenticating-ldap/)
 
+run project -> mvn spring-boot:run
