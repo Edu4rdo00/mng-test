@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.manager.teste.auth.filter.Secured;
 import br.com.manager.teste.bean.UsuarioAutenticado;
 import br.com.manager.teste.service.UsuarioService;
 import io.swagger.annotations.Api;
@@ -27,6 +28,7 @@ public class UsuarioRestService {
 		return usuarioService.autenticar(login, senha);
     }
 	
+	@Secured
 	@ApiOperation(value = "Renovar token.")
 	@GetMapping(value = "renovar-ticket/{token}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public boolean listar(@PathVariable String token) {
