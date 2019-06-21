@@ -1,11 +1,26 @@
 package br.com.manager.teste.bean;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Table(name = "pais")
 public class Pais extends EntityBean {
 
 	private static final long serialVersionUID = -371715111275889023L;
-	
+
+	@Id
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "pais_sequence")
+    @SequenceGenerator(name = "pais_sequence", sequenceName = "SEQ_PAIS")
+    private int id;
+	@Column(name = "nome", nullable = false)
 	private String nome;
+	@Column(name = "sigla", nullable = false)
 	private String sigla;
+	@Column(name = "gentilico", nullable = false)
 	private String gentilico;
 	
 	public String getNome() {
@@ -25,6 +40,12 @@ public class Pais extends EntityBean {
 	}
 	public void setGentilico(String gentilico) {
 		this.gentilico = gentilico;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 
 }

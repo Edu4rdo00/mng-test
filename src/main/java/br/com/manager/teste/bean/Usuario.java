@@ -1,12 +1,28 @@
 package br.com.manager.teste.bean;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Table(name = "usuario")
 public class Usuario extends EntityBean {
 
 	private static final long serialVersionUID = -2172251417761183749L;
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "pais_sequence")
+	@SequenceGenerator(name = "pais_sequence", sequenceName = "SEQ_PAIS")
+	private int id;
+	@Column(name = "login", nullable = false, unique=true)
 	private String login;
+	@Column(name = "senha", nullable = false)
 	private String senha;
+	@Column(name = "nome", nullable = false)
 	private String nome;
+	@Column(name = "administrador", nullable = false)
 	private boolean administrador;
 	
 	public String getLogin() {
@@ -32,6 +48,12 @@ public class Usuario extends EntityBean {
 	}
 	public void setAdministrador(boolean administrador) {
 		this.administrador = administrador;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 
 }

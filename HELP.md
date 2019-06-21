@@ -17,3 +17,4 @@ The following guides illustrate how to use some features concretely:
 * [Authenticating a User with LDAP](https://spring.io/guides/gs/authenticating-ldap/)
 
 run project -> mvn spring-boot:run
+https://dzone.com/articles/spring-boot-jpa-hibernate-oracle
