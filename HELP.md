@@ -1,4 +1,3 @@
-# Getting Started
 
 ### Reference Documentation
 For further reference, please consider the following sections:
@@ -23,3 +22,7 @@ https://spring.io/guides/tutorials/rest/
 https://medium.com/@raphaelbluteau/spring-boot-swagger-documentando-sua-api-automaticamente-27903293aeb6
 https://projectlombok.org/
 https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api
+
+https://www.concretepage.com/spring-boot/spring-boot-crudrepository-example
+https://www.concretepage.com/spring-5/spring-data-crudrepository-example
+https://www.baeldung.com/spring-data-jpa-query

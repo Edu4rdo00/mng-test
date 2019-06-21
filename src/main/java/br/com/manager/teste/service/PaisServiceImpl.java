@@ -13,7 +13,7 @@ public class PaisServiceImpl implements PaisService  {
 
 	@Autowired
 	private PaisRepository paisRepository;
-	
+
 	@Override
 	public List<Pais> getAll() {
 		return paisRepository.findAll();
@@ -21,23 +21,26 @@ public class PaisServiceImpl implements PaisService  {
 
 	@Override
 	public Pais save(Pais pais) {
-		return null;
+		return paisRepository.save(pais);
 	}
 
 	@Override
 	public List<Pais> findByName(String name) {
-		return null;
+		return paisRepository.findByName(name);
 	}
 
 	@Override
 	public boolean deleteById(int id) {
+		try {
+			if(paisRepository.existsById(id)) {
+				paisRepository.deleteById(id);
+				return true;
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 		return false;
 	}
-
-	@Override
-	public boolean existsById(int id) {
-		return false;
-	}
-
 
 }

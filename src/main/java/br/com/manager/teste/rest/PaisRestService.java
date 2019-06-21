@@ -27,27 +27,25 @@ public class PaisRestService {
 	@ApiOperation(value = "Busca lista de países.")
 	@GetMapping(value = "listar", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public List<Pais> listar() {
-		List<Pais> paisList = paisService.getAll();
-		return paisList;
+		return paisService.getAll();
     }
 	
 	@ApiOperation(value = "Excluir pais.")
 	@GetMapping(value = "excluir/{id}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public boolean remove(@PathVariable int id) {
-		return true;
+		return paisService.deleteById(id);
     }
 	
 	@ApiOperation(value = "Pesquisar pais por nome.")
 	@GetMapping(value = "pesquisar/{nome}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public List<Pais> findByName(@PathVariable String nome) {
-		List<Pais> paisList = paisService.getAll();
-		return paisList;
+		return paisService.findByName(nome);
     }
 	
 	@ApiOperation(value = "Salvar pais.")
 	@PostMapping(value = "salvar", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public Pais autenticar(@RequestBody Pais pais) {
-		return new Pais();
+	public Pais salvar(@RequestBody Pais pais) {
+		return paisService.save(pais);
     }
 
 }

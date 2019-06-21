@@ -10,6 +10,5 @@ public interface PaisService {
     public Pais save(Pais pais);
     public List<Pais> findByName(String name);
 	public boolean deleteById(int id);
-	public boolean existsById(int id); 
     
 }
