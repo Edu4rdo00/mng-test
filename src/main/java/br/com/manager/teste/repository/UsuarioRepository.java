@@ -9,4 +9,5 @@ import br.com.manager.teste.bean.Usuario;
 @Repository
 public interface UsuarioRepository extends CrudRepository<Usuario, Integer>{
 
+	
 }

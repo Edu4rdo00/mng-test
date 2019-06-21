@@ -3,12 +3,15 @@ package br.com.manager.teste.bean;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
+import io.swagger.annotations.ApiModelProperty;
+
 public class UsuarioAutenticado implements Serializable {
 
 	private static final long serialVersionUID = 5804285479239397777L;
 	
 	private String token;
 	private String login;
+	@ApiModelProperty(hidden=true)
 	private Timestamp expiracao;
 	private boolean administrador;
 	private boolean autenticado;

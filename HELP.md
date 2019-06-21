@@ -18,3 +18,8 @@ The following guides illustrate how to use some features concretely:
 
 run project -> mvn spring-boot:run
 https://dzone.com/articles/spring-boot-jpa-hibernate-oracle
+http://localhost/teste/swagger-ui.html#/usuario-rest-service
+https://spring.io/guides/tutorials/rest/
+https://medium.com/@raphaelbluteau/spring-boot-swagger-documentando-sua-api-automaticamente-27903293aeb6
+https://projectlombok.org/
+https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api

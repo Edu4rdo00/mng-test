@@ -3,6 +3,7 @@ package br.com.manager.teste.bean;
 import java.sql.Timestamp;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,9 +14,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Table(name = "token")
-public class Token extends EntityBean {
-
-	private static final long serialVersionUID = 6735736609312723076L;
+@Entity
+public class Token {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "pais_sequence")

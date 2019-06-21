@@ -1,6 +1,7 @@
 package br.com.manager.teste.bean;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -8,9 +9,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Table(name = "pais")
-public class Pais extends EntityBean {
-
-	private static final long serialVersionUID = -371715111275889023L;
+@Entity
+public class Pais {
 
 	@Id
     @GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "pais_sequence")

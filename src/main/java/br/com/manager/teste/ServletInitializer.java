@@ -1,4 +1,4 @@
-package com.manager.teste;
+package br.com.manager.teste;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

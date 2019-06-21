@@ -6,12 +6,14 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import br.com.manager.teste.bean.Pais;
-
+@SuppressWarnings("unchecked")
 @Repository
 public interface PaisRepository extends CrudRepository<Pais, Integer>{
 	
 	List<Pais> findAll();
-//	@SuppressWarnings("unchecked")
-//	Pais save(Pais pais);
+	List<Pais> findByName(String name);
+	Pais save(Pais pais);
+	void deleteById(int id);
+	boolean existsById(int id);
 
 }

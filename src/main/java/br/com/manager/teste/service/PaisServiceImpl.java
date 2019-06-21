@@ -19,9 +19,25 @@ public class PaisServiceImpl implements PaisService  {
 		return paisRepository.findAll();
 	}
 
-//	@Override
-//	public Pais save(Pais pais) {
-//		return paisRepository.save(pais);
-//	}
+	@Override
+	public Pais save(Pais pais) {
+		return null;
+	}
+
+	@Override
+	public List<Pais> findByName(String name) {
+		return null;
+	}
+
+	@Override
+	public boolean deleteById(int id) {
+		return false;
+	}
+
+	@Override
+	public boolean existsById(int id) {
+		return false;
+	}
+
 
 }
