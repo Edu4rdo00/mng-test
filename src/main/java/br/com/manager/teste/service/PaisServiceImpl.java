@@ -12,8 +12,8 @@ import br.com.manager.teste.repository.PaisRepository;
 public class PaisServiceImpl implements PaisService  {
 
 	@Autowired
-	private PaisRepository paisRepository;
-
+	PaisRepository paisRepository;
+	
 	@Override
 	public List<Pais> getAll() {
 		return paisRepository.findAll();

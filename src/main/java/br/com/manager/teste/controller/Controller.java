@@ -1,16 +1,16 @@
 package br.com.manager.teste.controller;
 
-import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 import br.com.manager.teste.bean.UsuarioAutenticado;
 
 public class Controller {
-	
+
 	private static volatile Controller controller;
-	
+
 	/** Lista usuários autenticados **/
-	private HashMap<String, UsuarioAutenticado> usuarioAutenticadoMap = new HashMap<String, UsuarioAutenticado>();
-	
+	private ConcurrentHashMap<String, UsuarioAutenticado> usuarioAutenticadoMap = new ConcurrentHashMap<String, UsuarioAutenticado>();
+
 	private Controller(){
 	}
 
@@ -25,11 +25,10 @@ public class Controller {
 	}
 
 	private void init(){
-		
 	}
 
-	public HashMap<String, UsuarioAutenticado> getUsuarioAutenticadoMap() {
+	public ConcurrentHashMap<String, UsuarioAutenticado> getUsuarioAutenticadoMap() {
 		return usuarioAutenticadoMap;
 	}
-	
+
 }

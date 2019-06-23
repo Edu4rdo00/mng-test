@@ -13,7 +13,7 @@ import br.com.manager.teste.bean.Pais;
 public interface PaisRepository extends CrudRepository<Pais, Integer>{
 	
 	List<Pais> findAll();
-	@Query(value = " SELECT p.* FROM pais p WHERE p.nome ILIKE '% :name %' ", nativeQuery = true)
+	@Query(value = " SELECT p FROM Pais p WHERE p.nome = :name")
 	List<Pais> findByName(@Param("name") String name);
 	Pais save(Pais pais);
 	void deleteById(int id);

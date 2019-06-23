@@ -1,5 +1,6 @@
-delete from usuario;
-delete from pais;
+--delete from token;
+--delete from usuario;
+--delete from pais;
 
 insert into usuario(id,login,senha,nome,administrador) values (SEQ_USUARIO.NEXTVAL, 'convidado', 'manager', 'Usuário convidado', 0); 
 insert into usuario(id,login,senha,nome,administrador) values (SEQ_USUARIO.NEXTVAL, 'admin', 'suporte', 'Gestor', 1); 

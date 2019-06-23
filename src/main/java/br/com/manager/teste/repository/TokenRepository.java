@@ -1,5 +1,7 @@
 package br.com.manager.teste.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
@@ -11,6 +13,7 @@ import br.com.manager.teste.bean.Token;
 @SuppressWarnings("unchecked")
 public interface TokenRepository extends CrudRepository<Token, Integer>{
 
+	List<Token> findAll();
 	@Query(value = " SELECT t.* FROM token t WHERE t.id_usuario = :idUser ", nativeQuery = true)
 	Token findByUser(@Param("idUser") int idUser);
 	@Query(value = " SELECT t.* FROM token t WHERE t.token = :token ", nativeQuery = true)

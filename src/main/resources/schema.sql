@@ -1,3 +1,9 @@
+drop table if exists usuario;
+drop table if exists pais;
+drop table if exists token;
+DROP SEQUENCE if exists SEQ_USUARIO;
+DROP SEQUENCE if exists SEQ_PAIS;
+DROP SEQUENCE if exists SEQ_TOKEN;
 CREATE TABLE IF NOT EXISTS usuario
 (
    id integer not null,
@@ -24,7 +30,7 @@ CREATE TABLE IF NOT EXISTS token
    id integer not null,
    token varchar(255) not null,
    id_usuario integer not null,
-   exipiracao varchar(255) not null,
+   expiracao varchar(255) not null,
    primary key(id),
    foreign key (id_usuario) references usuario
 );

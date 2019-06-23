@@ -18,7 +18,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 	private UsuarioRepository usuarioRepository;
 	@Autowired 
 	private TokenRepository tokenRepository;
-
+	
 	@Override
 	public UsuarioAutenticado autenticar(String login, String senha) {
 		UsuarioAutenticado usuarioAutenticado = new UsuarioAutenticado();
@@ -29,7 +29,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 			usuarioAutenticado.setAutenticado(true);
 			usuarioAutenticado.setExpiracao(TokenUtils.generateTokenDateExpiration());
 			usuarioAutenticado.setLogin(usuario.getLogin());
-			usuarioAutenticado.setToken("aaaaaaaaaaaa"+usuario.getNome());
+			usuarioAutenticado.setToken(TokenUtils.generateToken());
 			Controller.getInstance().getUsuarioAutenticadoMap().put(usuarioAutenticado.getToken(), usuarioAutenticado);
 			if(token == null) {
 				token = new Token();

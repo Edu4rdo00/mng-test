@@ -18,10 +18,10 @@ import javax.persistence.Table;
 public class Token {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "pais_sequence")
-	@SequenceGenerator(name = "pais_sequence", sequenceName = "SEQ_PAIS")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "SEQ_TOKEN")
+	@SequenceGenerator(name = "SEQ_TOKEN", sequenceName = "SEQ_TOKEN")
 	private int id;
-	@Column(name = "token", nullable = false)
+	@Column(name = "token", nullable = false, length = 255)
 	private String token;
 	@Column(name = "expiracao", nullable = false)
 	private Timestamp expiracao;

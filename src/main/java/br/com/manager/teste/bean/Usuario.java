@@ -13,14 +13,14 @@ import javax.persistence.Table;
 public class Usuario {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "pais_sequence")
-	@SequenceGenerator(name = "pais_sequence", sequenceName = "SEQ_PAIS")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator = "SEQ_USUARIO")
+	@SequenceGenerator(name = "SEQ_USUARIO", sequenceName = "SEQ_USUARIO")
 	private int id;
-	@Column(name = "login", nullable = false, unique=true)
+	@Column(name = "login", nullable = false, unique=true, length = 255)
 	private String login;
-	@Column(name = "senha", nullable = false)
+	@Column(name = "senha", nullable = false, length = 255)
 	private String senha;
-	@Column(name = "nome", nullable = false)
+	@Column(name = "nome", nullable = false, length = 255)
 	private String nome;
 	@Column(name = "administrador", nullable = false)
 	private boolean administrador;
