@@ -8,7 +8,6 @@ public class Controller {
 
 	private static volatile Controller controller;
 
-	/** Lista usuários autenticados **/
 	private ConcurrentHashMap<String, UsuarioAutenticado> usuarioAutenticadoMap = new ConcurrentHashMap<String, UsuarioAutenticado>();
 
 	private Controller(){
